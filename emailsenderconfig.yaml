@@ -1,0 +1,8 @@
+apiVersion: example.com/v1
+kind: EmailSenderConfig
+metadata:
+  name: mailersend-config
+  namespace: default
+spec:
+  apiTokenSecretRef: mailersend-api-token
+  senderEmail: "devinveslaw@gmail.com"

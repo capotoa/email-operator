@@ -1,0 +1,25 @@
+domain: example.com
+layout:
+- go.kubebuilder.io/v3
+projectName: email-operator
+repo: example.com/email-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: example
+  kind: EmailSenderConfig
+  path: email-operator/api/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: example
+  kind: Email
+  path: email-operator/api/v1
+  version: v1
+version: "3"

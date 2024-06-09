@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: email-operator-config
+data:
+  mailersend-url: "https://api.mailersend.com/v1/email"
+  mailgun-url: "https://api.mailgun.net/v3/your-domain/messages"

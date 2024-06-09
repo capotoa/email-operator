@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: email-operator
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      control-plane: controller-manager
+  template:
+    metadata:
+      labels:
+        control-plane: controller-manager
+    spec:
+      serviceAccountName: email-operator
+      containers:
+        - name: manager
+          image: <your-operator-image>
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "0.8"
+            limits:
+              memory: "256Mi"
+              cpu: "0.8"
